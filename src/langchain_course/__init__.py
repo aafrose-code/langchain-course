@@ -1,14 +1,15 @@
 from typing import List
 
-from pydantic import BaseModel, Field
 from dotenv import load_dotenv
+from pydantic import BaseModel, Field
 
 load_dotenv()
 
-from langchain_tavily import TavilySearch
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 from langchain_openai import ChatOpenAI
+from langchain_tavily import TavilySearch
+
 
 class Source(BaseModel):
     """Schema for a source used by the agent"""
